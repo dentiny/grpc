@@ -398,7 +398,7 @@ const ViewDescriptor& ServerCompletedRpcsCumulative() {
   const static ViewDescriptor descriptor =
       DefaultViewDescriptor()
           .set_name("grpc.io/server/completed_rpcs/cumulative")
-          .set_measure(kRpcServerComletedRpcMeasureName)
+          .set_measure(kRpcServerStartedRpcsMeasureName)
           .set_aggregation(Aggregation::Count())
           .add_column(ServerMethodTagKey())
           .add_column(ServerStatusTagKey());

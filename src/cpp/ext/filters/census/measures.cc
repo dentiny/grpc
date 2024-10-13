@@ -181,9 +181,8 @@ MeasureInt64 RpcServerReceivedMessagesPerRpc() {
 }
 
 MeasureInt64 RpcServerCompletedRpcs() {
-  static const auto measure =
-      MeasureInt64::Register(kRpcServerComletedRpcMeasureName,
-                             "Number of completed rpcs", kCount);
+  static const auto measure = MeasureInt64::Register(
+      kRpcServerStartedRpcsMeasureName, "Number of completed rpcs", kCount);
   return measure;
 }
 
